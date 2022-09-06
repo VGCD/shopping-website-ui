@@ -1,0 +1,54 @@
+<style type="text/css">
+	table{
+		width: 100%;
+		font-size: 20px;
+	}
+	td{
+		text-align: left;
+	}
+	body{
+		background: #e2e2e2;
+	}
+	.btn{
+		border-radius: 10px;
+		background: black;
+		color: white;
+		font-size: 22px;
+		margin: 1vh;
+	}
+</style>
+<script type="text/javascript">
+	function m(mw){
+	if(String(mw).indexOf(".") > -1) {
+    var a = String(mw).split(".")[0] +"." + String(mw).split(".")[1].split("")[0] + String(mw).split(".")[1].split("")[1];return parseFloat(a);} else {
+    	return mw
+    }
+}
+</script>
+<table>
+	<tr>
+		<td>Cost of product</td>
+		<td>: Rs  
+			<script>document.write(window.location.href.split("#")[1]);</script>
+		</td>
+	</tr>
+	<tr>
+		<td>Tax</td>
+		<td>: Rs <script>
+			var a = parseInt(window.location.href.split("#")[1]);
+			document.write(m(a*0.18));
+		</script></td>
+	</tr>
+	<tr>
+		<td>Total</td>
+		<td>: Rs <script>
+			var a = parseInt(window.location.href.split("#")[1]);
+			a = a + (0.18*a);
+			document.write(m(a));
+		</script></td>
+	</tr>
+	<tr>
+		<td><button class="btn" onclick="alert('This is just for trial purpose!')">Proceed</button></td>
+		<td></td>
+	</tr>
+</table>

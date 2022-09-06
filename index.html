@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Shopping UI/UX</title>
+	<link rel="shortcut icon" href="https://media.istockphoto.com/vectors/online-shop-logo-design-template-vector-id1150644423?k=20&m=1150644423&s=170667a&w=0&h=LHw96QrzY7ci1ej-1NLjF1oCZpJ5xEPS5arHA1-h7qM=">
+	<style type="text/css">
+		.container{
+			width: 200px;
+			height: 298px;
+			border: solid;
+			text-align: center;
+			border-radius: 10px;
+			float: left;
+			margin: 8px;
+			padding: 0vh;
+		}
+		.con-img{
+			height: 175px;
+			border-radius: 10px 10px 0px 0px;
+			width: 200px;
+		}
+		.con-des{
+			width: 200px;
+			height: 40px;
+		}
+		.con-des-a{
+			width: 170px;
+			float: left;
+			height: 50px;
+			font-size: 20px;
+			text-align: left;
+			margin: 3px;
+		}
+		.con-des-price{
+			margin: 3px;
+			width: 100px;
+			float: right;
+			font-size: 20px;
+			font-weight: bold;
+		}
+		.con-tt{
+			text-align: center;
+			margin: 0vh;
+			border-color: black;
+			height: 35px;
+			font-size: 22px;
+			width: 200px;
+			border: solid;
+			background: #2b6dda;
+			border-radius: 0px 0px 10px 10px;
+			color: white;
+		}
+		body{
+			margin: 0vh;
+		}
+		nav{
+			height: 7vh;
+			margin: 0vh;
+			padding: 1vh;
+			font-size: 5vh;
+			text-align: center;
+			background: black;
+			color: white;
+		}
+		#logo{
+			margin: 1vh;
+			float: left;
+			height: 5vh;
+		}
+	</style>
+	<script type="text/javascript">
+		function purchase(k) {
+			var mm = document.createElement("iframe");
+			mm.src="pay.html#"+String(k);
+			if (window.innerWidth < window.innerHeight){
+				mm.style="position:fixed;top:50vh;height:49vh;border:solid;left:1px;width:97%;border-radius:20px 20px 0px 0px;";
+			} else {
+				mm.style="position:fixed;top:30vh;height:49vh;border:solid;left:"+window.innerWidth*0.33+"px;width:30%;border-radius:10px;";
+			}
+
+			mm.id="mm-ifr";
+			document.body.appendChild(mm);
+			if (window.innerWidth < window.innerHeight){
+				var t = '<button style="position:fixed;top:50vh;left:'+window.innerWidth*0.9+'px;font-size:25px;padding:1vh;background:red;color:white;" id="btn1" onclick="y()">X</button>';
+			} else {
+				var t = '<button style="position:fixed;top:30vh;left:'+window.innerWidth*0.60+'px;font-size:25px;padding:1vh;background:red;color:white;" id="btn1" onclick="y()">X</button>';
+			}
+			document.body.innerHTML = document.body.innerHTML +t;
+
+		}
+		function y() {
+			document.getElementById("mm-ifr").remove();
+			document.getElementById("btn1").remove();
+		}
+	</script>
+</head>
+<body>
+
+<nav>
+	<img src="https://media.istockphoto.com/vectors/online-shop-logo-design-template-vector-id1150644423?k=20&m=1150644423&s=170667a&w=0&h=LHw96QrzY7ci1ej-1NLjF1oCZpJ5xEPS5arHA1-h7qM=" id="logo">
+	Shopping site
+</nav>
+
+<div class="container">
+	<img class="con-img" src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQe37-eOw9i7Fgv-FQTEcGV6Px1GZbdGkDoaYzZfELFsYx6c9RPylOUWb3Qu5LbDg0n2JRXzlSDTTcnTM77wsmzZwDBRL-n32beIO7Nu8Y&usqp=CAE">
+	<div class="con-des">
+		<div class="con-des-a">Solid Round Neck T-shirt</div>
+		<div class="con-des-price">Rs 299</div>
+	</div>
+	<button class="con-tt" onclick="purchase(299)">Purchase</button>
+</div>
+
+<div class="container">
+	<img class="con-img" src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTFaUu1_VSGU2xF7Mktv7wr8uvyybqCLI2S1G5uw1GsoEeCNWBIUZ9cYMT5dX3jynOHedV_S1l0Odao-zntTTb7XqCs59GfUrgBfV_DbpwQphb6pttUg4i2&usqp=CAY">
+	<div class="con-des">
+		<div class="con-des-a">The NikeCourt Dri-FIT Rafa T-Shirt</div>
+		<div class="con-des-price">Rs 399</div>
+	</div>
+	<button class="con-tt" onclick="purchase(399)">Purchase</button>
+</div>
+
+<div class="container">
+	<img class="con-img" src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSx0DGrsfBYv5AEOW-NNSVAxEIvRlB-cbIc9dgm3l0173CUgrsrw2A74YcIu4lDdAidUDhbSofJg8h_UqEVJaF1knnSilIb7Yxos1YOUIiPxBfhpehmxrGV&usqp=CAY">
+	<div class="con-des">
+		<div class="con-des-a">Nike Sweat shirt</div>
+		<div class="con-des-price">Rs 399</div>
+	</div>
+	<button class="con-tt" onclick="purchase(399)">Purchase</button>
+</div>
+
+<div class="container">
+	<img class="con-img" src="https://th.bing.com/th?id=OPA.c3jFFgwUgfuf%2fQ474C474&w=160&h=213&pid=21.1">
+	<div class="con-des">
+		<div class="con-des-a">Solid Dri-FIT Training Sport jacket</div>
+		<div class="con-des-price">Rs 499</div>
+	</div>
+	<button class="con-tt" onclick="purchase(499)">Purchase</button>
+</div>
+
+<div class="container">
+	<img class="con-img" src="https://th.bing.com/th?id=OPA.OEqvwmIpzmQJJg474C474&w=248&h=248&o=5&pid=21.1">
+	<div class="con-des">
+		<div class="con-des-a">Nike Printed Dri-FIT Round Neck t-shirt</div>
+		<div class="con-des-price">Rs 499</div>
+	</div>
+	<button class="con-tt" onclick="purchase(499)">Purchase</button>
+</div>
+
+</body>
+</html>
