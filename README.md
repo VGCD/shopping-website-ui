@@ -2,7 +2,7 @@
 This website is made using html, js and css.
 
 # Demo
-For demo- [Open this link](https://abhineetraj1.github.com/shopping-website-ui)
+For demo- [Open this link](https://abhineetraj1.github.io/shopping-website-ui)
 
 
 # Programming languages used:-
